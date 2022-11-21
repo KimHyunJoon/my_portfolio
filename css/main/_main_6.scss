@@ -1,0 +1,59 @@
+.main_6 {
+  margin: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .inner {
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    h1 {
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        z-index: 3;
+        /* 수정 */
+        opacity: 1;
+      }
+    }
+    .img_wrap {
+      width: 600px;
+      height: 600px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .tail {
+        cursor: pointer;
+        width: calc(100% / 20);
+        height: calc(100% / 20);
+        /* 수정 */
+        background-color: #009efd;
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .inner {
+    h1 {
+      img {
+        width: 400px !important;
+      }
+    }
+    .img_wrap {
+      width: 400px !important;
+      height: 400px !important;
+
+    }
+  }
+}
